@@ -23,8 +23,8 @@ This lab covers the following:
 
 It is strongly recommended to perform this lab on a **virtual machine**.
 
-- **Operating System:** [Parrot Security OS](https://parrotsec.org/)  
-- **Hypervisor:** [Oracle VirtualBox](https://www.oracle.com/europe/virtualization/technologies/vm/downloads/virtualbox-downloads.html)
+- **Operating System:** <a href="https://parrotsec.org/" target="_blank" rel="noopener noreferrer">Parrot Security OS</a>  
+- **Hypervisor:** <a href="https://www.oracle.com/europe/virtualization/technologies/vm/downloads/virtualbox-downloads.html" target="_blank" rel="noopener noreferrer">Oracle VirtualBox</a>
 
 You can download the Parrot `.ova` file from the official website and import it into your hypervisor of choice.
 
@@ -42,7 +42,7 @@ This command will clone the full repository from GitHub.
 
 ---
 
-📂 Step 2 — Go to the Scripts Directory
+## 📂 Step 2 — Go to the Scripts Directory
 
 Navigate to the scripts folder inside the cloned repository:
 
@@ -50,7 +50,7 @@ Navigate to the scripts folder inside the cloned repository:
 cd credential_spoofing_http_vs_https/scripts/
 ```
 
-🐍 Step 3 — Create the Virtual Environment
+## 🐍 Step 3 — Create the Virtual Environment
 
 Launch the virtual environment setup script:
 
@@ -60,7 +60,7 @@ source creation_python_venv.sh
 We use the source command instead of ./creation_python_venv.sh so that the script runs inside the current shell (not in a subshell).
 Otherwise, the activation of the virtual environment and directory change would not persist.
 
-🧩 Step 4 — Verify the Setup
+## 🧩 Step 4 — Verify the Setup
 
 Once the script finishes, your terminal should look similar to this:
 
