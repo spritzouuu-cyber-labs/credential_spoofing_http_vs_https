@@ -23,8 +23,9 @@ This lab covers the following:
 
 It is strongly recommended to perform this lab on a **virtual machine**.
 
-- **Operating System:** <a href="https://parrotsec.org/" target="_blank" rel="noopener noreferrer">Parrot Security OS</a>  
-- **Hypervisor:** <a href="https://www.oracle.com/europe/virtualization/technologies/vm/downloads/virtualbox-downloads.html" target="_blank" rel="noopener noreferrer">Oracle VirtualBox</a>
+<a href="https://parrotsec.org/" target="_blank" rel="noopener noreferrer">Parrot Security OS</a>  
+<a href="https://www.oracle.com/europe/virtualization/technologies/vm/downloads/virtualbox-downloads.html" target="_blank" rel="noopener noreferrer">Oracle VirtualBox</a>
+
 
 You can download the Parrot `.ova` file from the official website and import it into your hypervisor of choice.
 
