@@ -1,0 +1,2 @@
+sudo parrot-upgrade -y
+
