@@ -1,8 +1,8 @@
 Flask==3.0.3
 Werkzeug==3.0.2
 requests==2.32.3
-cryptography==41.0.3
-pyOpenSSL==24.1.0
+cryptography>=41.0.5,<43.0
+pyOpenSSL>=24.0,<25.0
 scapy==2.5.0
 pyshark==0.6
 mitmproxy==11.0.2
