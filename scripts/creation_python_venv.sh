@@ -16,6 +16,7 @@ cd ~/cyberproject/credential_spoofing_http_vs_https || {
 # 3. Update system and install Python + Wireshark essentials
 echo "🔧 Installing system dependencies..."
 sudo apt update -qq
+sudo apt-get -y upgrade
 sudo apt install -y python3 python3-venv python3-pip wireshark tshark libcap2-bin >/dev/null
 
 # 4. Create a virtual environment named 'venv'
