@@ -26,15 +26,15 @@ export SSLKEYLOGFILE=/tmp/sslkeys.log
 ```bash
 tail -f /tmp/sslkeys.log  
 ```
-
-# make sure all browser windows are closed first, then start:
-```bash
-firefox https://127.0.0.1:8443
-```
 You should see sompthing like
 ```bash
 CLIENT_RANDOM <client_random_hex> <master_secret_hex>
 ```
+# make sure all browser windows are closed first, then start:
+```bash
+firefox https://127.0.0.1:8443
+```
+
 
 ## 2) 🧪 Start Wireshark Capture  as mentioned in https__lab_how_to_guide.md
 
