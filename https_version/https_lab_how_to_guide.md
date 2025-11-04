@@ -70,13 +70,6 @@ Once the script finishes, your terminal should look similar to this:
 </figure>
 
 
-
-
-
-
-
-
-
 ## ✅ Step 5 — Start the local HTTPS server and test
 
 Now that the environment and scripts are ready, start the web server and verify the login page in your browser.
@@ -87,46 +80,62 @@ Now that the environment and scripts are ready, start the web server and verify 
 cd ~/cyberproject/credential_spoofing_http_vs_https/scripts/
 ```
 
-### ⚙️ 2. Launch the HTTPS Server
+### ⚙️ 2. Launch self signed certificaiton script
+
+```bash
+python3 self_signed_certification.py
+```
+### ⚙️ 3. Launch the HTTPS Server
 
 ```bash
 python3 https_server_start.sh
 ```
 
-### 🌐 3. Open the Login Page in Your Browser
+### 🌐 3. Open the site in your browser and accept the risk
 
 ```bash
-firefox 127.0.0.1:8080
+firefox https://127.0.0.1:8443
 ```
+Your browser will display a security warning because the certificate is self-signed.
+ - In Firefox: Advanced → Accept the Risk and Continue 
+ - In Chrome: Advanced → Proceed to 127.0.0.1 (unsafe)
+
+ <figure align="center">
+  <img src="../images/https_accept_warning.png" alt="https accept warning" width="600">
+  <figcaption><i>Figure 2 — https warning page</i></figcaption>
+</figure>
+
+After accepting the risk:
 
 <figure align="center">
   <img src="../images/login_form.png" alt="Login form" width="600">
-  <figcaption><i>Figure 2 — Login form in firefox</i></figcaption>
+  <figcaption><i>Figure 3 — Login form in firefox</i></figcaption>
 </figure>
 
 You should see the login form. 
 
-## 🧪 Step 6 — Capture the HTTP Traffic with Wireshark
-This step demonstrates how credentials are transmitted in plaintext over HTTP.
+## 🧪 Step 6 — Capture the HTTPS Traffic with Wireshark
+This step demonstrates how credentials are transmitted in an encrypted way over HTTPS.
 
 ### 🧩 1. Start Wireshark and Select the Loopback Interface
-Filter the traffic to only capture HTTP packets:
+Filter the traffic to only capture HTTPS packets:
 
 ```bash
 wireshark
 ```
 <figure align="center">
-  <img src="../images/wireshark_setup_http.png" alt="Wireshark Setup" width="600">
-  <figcaption><i>Figure 3 — Wireshark setup for http</i></figcaption>
+  <img src="../images/wireshark_setup_https.png" alt="Wireshark Setup" width="600">
+  <figcaption><i>Figure 4 — Wireshark setup for https</i></figcaption>
 </figure>
+In a real word example the best way to filter https is tcp.filter == 443
 
 
 ### 🔍 2. Submit Test Credentials and Inspect the Packets
 Return to the browser, enter any username/password in the form, and submit.
-Then, go back to Wireshark to inspect the HTTP POST request — you’ll see the credentials in plaintext.
+Then, go back to Wireshark to inspect the HTTPS  requests (TLS) — you’ll see all the requests encrypted.
 
 <figure align="center">
-  <img src="../images/http_wireshark_plain_creds.png" alt="Wireshark plain creds" width="600">
-  <figcaption><i>Figure 4 — Wireshark http interception of plain credentials</i></figcaption>
+  <img src="../images/wireshark_encrypted_communication .png" alt="Wireshark encrytped communication" width="600">
+  <figcaption><i>Figure 5 — Wireshark https interception of encrypted traffic</i></figcaption>
 </figure>
 
