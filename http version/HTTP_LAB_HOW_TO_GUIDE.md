@@ -65,7 +65,7 @@ Otherwise, the activation of the virtual environment and directory change would 
 Once the script finishes, your terminal should look similar to this:
 
 <figure align="center">
-  <img src="images/venv_environment.png" alt="Virtual environment terminal" width="600">
+  <img src="../images/venv_environment.png" alt="Virtual environment terminal" width="600">
   <figcaption><i>Figure 1 — Virtual environment successfully activated in the terminal</i></figcaption>
 </figure>
 
@@ -92,7 +92,7 @@ firefox 127.0.0.1:8080
 ```
 
 <figure align="center">
-  <img src="images/login_form.png" alt="Login form" width="600">
+  <img src="../images/login_form.png" alt="Login form" width="600">
   <figcaption><i>Figure 2 — Login form in firefox</i></figcaption>
 </figure>
 
@@ -108,7 +108,7 @@ Filter the traffic to only capture HTTP packets:
 wireshark
 ```
 <figure align="center">
-  <img src="images/wireshark_setup_http.png" alt="Wireshark Setup" width="600">
+  <img src="../images/wireshark_setup_http.png" alt="Wireshark Setup" width="600">
   <figcaption><i>Figure 3 — Wireshark setup for http</i></figcaption>
 </figure>
 
@@ -118,7 +118,7 @@ Return to the browser, enter any username/password in the form, and submit.
 Then, go back to Wireshark to inspect the HTTP POST request — you’ll see the credentials in plaintext.
 
 <figure align="center">
-  <img src="images/http_wireshark_plain_creds.png" alt="Wireshark plain creds" width="600">
+  <img src="../images/http_wireshark_plain_creds.png" alt="Wireshark plain creds" width="600">
   <figcaption><i>Figure 4 — Wireshark http interception of plain credentials</i></figcaption>
 </figure>
 
