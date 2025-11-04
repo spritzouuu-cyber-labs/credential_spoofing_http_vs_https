@@ -52,7 +52,7 @@ firefox https://127.0.0.1:8443
 In Wireshark: Edit → Preferences → Protocols → TLS
 Set (Pre)-Master-Secret log filename to:
 
-/tmp/sslkeys.log (Linux/macOS)
+/tmp/sslkeys.log
 
 Click OK. If you already have a capture open, stop/start capture or re-open the pcap so Wireshark re-processes packets with keys.
 
