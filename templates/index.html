@@ -6,20 +6,33 @@
   <title>Login Form</title>
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-<body>
-  <div class="login-box">
-    <h2>Login</h2>
-    <form action="/login" method="POST">
-      <div class="user-box">
-        <input type="text" name="username" required />
-        <label>Username</label>
+  <body>
+    <div class="container">
+      <form>
+        <p>Welcome</p>
+        <input
+          type="email"
+          placeholder="Email"
+        /><br />
+        <input
+          type="password"
+          placeholder="Password"
+        /><br />
+        <input
+          type="button"
+          value="Sign in"
+        /><br />
+        <a href="#">Forgot Password?</a>
+      </form>
+
+      <div class="drops">
+        <div class="drop drop-1"></div>
+        <div class="drop drop-2"></div>
+        <div class="drop drop-3"></div>
+        <div class="drop drop-4"></div>
+        <div class="drop drop-5"></div>
       </div>
-      <div class="user-box">
-        <input type="password" name="password" required />
-        <label>Password</label>
-      </div>
-      <button type="submit" class="submit-btn">Submit</button>
-    </form>
-  </div>
-</body>
+    </div>
+    
+  </body>
 </html>
