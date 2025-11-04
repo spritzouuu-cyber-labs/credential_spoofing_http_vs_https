@@ -1,0 +1,94 @@
+/* Global reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* CSS variables instead of SCSS $variables */
+:root {
+  --bg-body: #121212;
+  --text: #fff;
+  --accent: rgba(0, 212, 255, 1);
+  --grad: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(52, 9, 121, 1) 37%,
+    rgba(0, 212, 255, 1) 94%
+  );
+}
+
+html { font-size: 23px; }
+
+body {
+  background: var(--bg-body);
+  color: var(--text);
+  font-family: monospace, sans-serif;
+  letter-spacing: 0.05em;
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+h1 { margin: 0 0 1rem; }
+
+/* Flattened .form, .control, input, button */
+.form {
+  width: 300px;
+  padding: 64px 15px 24px;
+  margin: 0 auto;
+  background: transparent;
+}
+
+.form .control {
+  margin: 0 0 24px;
+}
+
+.form .control input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  font-family: monospace, sans-serif;
+  letter-spacing: 0.05em;
+  font-size: 16px;
+  border-bottom: 1px solid rgba(255,255,255,.25);
+  outline: none;
+}
+
+.form .control input:hover,
+.form .control input:focus {
+  border-bottom-color: rgba(255,255,255,.6);
+  outline: none;
+}
+
+.btn {
+  width: 100%;
+  display: block;
+  padding: 14px 16px;
+  margin-top: 8px;
+  background: transparent;
+  color: var(--text);
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  font-family: monospace, sans-serif;
+  font-size: 16px;
+  border: 0;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Example decorative cube from the pen (flattened) */
+.block-cube {
+  position: relative;
+}
+.block-cube .bg-top {
+  position: absolute;
+  height: 10px;
+  left: 0;
+  right: 0;
+  top: -10px;
+  background: var(--grad);
+}
