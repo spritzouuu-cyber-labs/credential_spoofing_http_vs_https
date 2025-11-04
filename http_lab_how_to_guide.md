@@ -65,6 +65,60 @@ Otherwise, the activation of the virtual environment and directory change would 
 Once the script finishes, your terminal should look similar to this:
 
 <figure align="center">
-  <img src="images/image.png" alt="Virtual environment terminal" width="600">
+  <img src="images/venv_environment.png" alt="Virtual environment terminal" width="600">
   <figcaption><i>Figure 1 — Virtual environment successfully activated in the terminal</i></figcaption>
 </figure>
+
+## ✅ Step 5 — Start the local HTTP server and test
+
+Now that the environment and scripts are ready, start the web server and verify the login page in your browser.
+
+### 🧭 1. Navigate to the Scripts Directory
+
+```bash
+cd ~/cyberproject/credential_spoofing_http_vs_https/scripts/
+```
+
+### ⚙️ 2. Launch the HTTP Server
+
+```bash
+python3 http_server_start.sh
+```
+
+### 🌐 3. Open the Login Page in Your Browser
+
+```bash
+firefox 127.0.0.1:8080
+```
+
+<figure align="center">
+  <img src="images/login_form.png" alt="Login form" width="600">
+  <figcaption><i>Figure 2 — Login form in firefox</i></figcaption>
+</figure>
+
+You should see the login form. 
+
+## 🧪 Step 6 — Capture the HTTP Traffic with Wireshark
+This step demonstrates how credentials are transmitted in plaintext over HTTP.
+
+### 🧩 1. Start Wireshark and Select the Loopback Interface
+Filter the traffic to only capture HTTP packets:
+
+```bash
+wireshark
+```
+<figure align="center">
+  <img src="images/wireshark_setup_http.png" alt="Wireshark Setup" width="600">
+  <figcaption><i>Figure 3 — Wireshark setup for http</i></figcaption>
+</figure>
+
+
+### 🔍 2. Submit Test Credentials and Inspect the Packets
+Return to the browser, enter any username/password in the form, and submit.
+Then, go back to Wireshark to inspect the HTTP POST request — you’ll see the credentials in plaintext.
+
+<figure align="center">
+  <img src="images/http_wireshark_plain_creds.png" alt="Wireshark plain creds" width="600">
+  <figcaption><i>Figure 4 — Wireshark http interception of plain credentials</i></figcaption>
+</figure>
+
